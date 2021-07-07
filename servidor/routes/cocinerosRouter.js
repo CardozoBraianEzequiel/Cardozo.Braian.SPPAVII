@@ -2,7 +2,7 @@ const cocinerosRouter = require('express').Router();
 const Cocinero = require('../models/Cocinero');
 const { verifyToken } = require('../utils/middlewares');
 
-//cocinerosRouter.use(verifyToken);
+cocinerosRouter.use(verifyToken);
 
 cocinerosRouter.get("/", (req, res, next) => 
 {
